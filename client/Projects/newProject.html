@@ -1,0 +1,19 @@
+<template name="newProject">
+<div style="margin-left:400px; margin-right : 190px">
+   <h3>Project</h3>
+   {{#autoForm collection="Project" id="insertProject" type="insert" resetOnSuccess=true}}
+     <fieldset>
+       <legend>Add Project</legend>
+       {{> afQuickField name='name'}}
+       {{> afQuickField name='description'}}
+       {{> afQuickField name='platform'}}
+       {{> afQuickField name='createdAt' type="hidden"}}
+       {{> afQuickField name='userId' type="hidden"}}
+       {{> afQuickField name='visibility'}}
+        <button type="submit" class="btn btn-success">Add</button>
+     </fieldset>
+     {{/autoForm}}
+     &nbsp;
+     {{> userProjects}}
+   </div>
+</template>

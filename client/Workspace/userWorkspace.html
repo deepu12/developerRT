@@ -1,0 +1,13 @@
+<template name="userWorkspace">
+   <div class="panel panel-primary" style="margin-right : 190px">
+      <div class="panel-heading">
+         <h3 class="panel-title">User Workspace</h3>
+      </div>
+      {{#each wSpace}}
+      <div class="panel-body">
+         <a href="/workspace/{{_id}}">{{name}}</a>
+      </div>
+      {{/each}}
+   </div>
+
+</template>
