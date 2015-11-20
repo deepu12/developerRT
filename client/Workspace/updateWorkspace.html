@@ -1,0 +1,11 @@
+<template name="updateWorkspace">
+   {{#autoForm collection="WorkSpace" id="updateWorkspace" type="update" doc=workSp}}
+   <fieldset>
+     <legend>Workspace Information</legend>
+     {{> afQuickField name='name'}}
+     {{> afQuickField name='userName' readonly=true}}
+     {{> afQuickField name='createdAt' readonly=true}}
+   </fieldset>
+     <button type="submit" class="btn btn-primary">RENAME</button>
+     {{/autoForm}}
+</template>

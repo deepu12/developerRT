@@ -1,13 +1,23 @@
 <template name="workspace">
    <div style="margin-left: 400px; margin-right : 190px">
-   {{#autoForm collection="WorkSpace" id="updateWorkspace" type="update" doc=workSp}}
-   <fieldset>
-     <legend>Edit Workspace</legend>
-     {{> afQuickField name='name'}}
-     {{> afQuickField name='userName' readonly=true}}
-     {{> afQuickField name='createdAt' readonly=true}}
-   </fieldset>
-     <button type="submit" class="btn btn-primary">Save</button>
-     {{/autoForm}}
-  </div>
+      <ul class="nav nav-tabs">
+         <li class=""><a href="#settings"  data-toggle="tab" aria-expanded="false">Settings</a></li>
+         <li class=""><a href="#projects" data-toggle="tab" aria-expanded="false">Projects</a></li>
+         <li class=""><a href="#members" data-toggle="tab" aria-expanded="false">Members</a></li>
+      </ul>
+      <div id="myTabContent" class="tab-content">
+         <div class="tab-pane fade active" id="settings">
+            &nbsp;
+            {{> updateWorkspace}}
+         </div>
+         <div class="tab-pane fade active" id="projects">
+            &nbsp;
+            {{> userProjects}}
+         </div>
+         <div class="tab-pane fade active" id="members">
+            &nbsp;
+            {{> workspaceMembers}}
+         </div>
+      </div>
+   </div>
 </template>

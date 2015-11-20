@@ -1,0 +1,14 @@
+<template name="workspaceMembers">
+   <div class="panel panel-primary" style="margin-right : 190px">
+      <div class="panel-heading">
+         <h3 class="panel-title">Workspace Members</h3>
+      </div>
+      {{#each wsMembers}}
+      <div class="panel-body">
+         {{userName}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;{{role}}
+         &nbsp;&nbsp;&nbsp;
+         <button class="btn btn-info" id="add-members">+</button>
+      </div>
+      {{/each}}
+   </div>
+</template>

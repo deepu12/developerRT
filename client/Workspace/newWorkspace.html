@@ -1,7 +1,6 @@
 <template name="newWorkspace">
    <div style="margin-left:400px; margin-right : 190px">
-
-   {{#autoForm collection="WorkSpace" id="insertWorkspace" type="insert"}}
+      {{#autoForm collection="WorkSpace" id="insertWorkspace" type="insert"}}
      <fieldset>
        <legend>Add Workspace</legend>
        {{> afQuickField name='name' placeHolder="WorkSpace Name"}}
@@ -9,12 +8,15 @@
        {{> afQuickField name='role' type="hidden"}}
        {{> afQuickField name='userName' type="hidden"}}
        {{> afQuickField name='createdAt' type="hidden"}}
+       {{#afEachArrayItem name="members"}}
+         {{> afQuickField name=this.current.memberName}}
+         {{> afQuickField name=this.current.memberRole}}
+       {{/afEachArrayItem}}
        <button type="submit" class="btn btn-success">Add</button>
       </fieldset>
        {{/autoForm}}
          &nbsp;
        <h3>WorkSpace's</h3>
        {{> userWorkspace}}
-       </div>
-
+    </div>
 </template>
