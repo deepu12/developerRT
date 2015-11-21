@@ -27,3 +27,10 @@ aldeed:autoform
 aldeed:simple-schema
 aldeed:collection2
 chriswessels:glyphicons-halflings
+meteorhacks:npm
+
+
+npm-container
+cfs:standard-packages
+cfs:gridfs
+cfs:autoform

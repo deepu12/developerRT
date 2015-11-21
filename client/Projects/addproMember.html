@@ -1,0 +1,20 @@
+<template name="addproMember">
+   <div style="margin-left: 400px; margin-right : 190px">
+   {{#autoForm collection="Project" id="addMembers" type="update" doc=addMember}}
+   <fieldset>
+     <legend>Add Member</legend>
+     {{> afQuickField name='name' readonly=true}}
+     {{> afQuickField name='description' type="hidden"}}
+     {{> afQuickField name='platform' type="hidden"}}
+     {{> afQuickField name='visibility' type="hidden"}}
+     {{> afQuickField name='userName' type="hidden"}}
+     {{> afQuickField name='createdAt' type="hidden"}}
+     {{#afEachArrayItem name="members"}}
+      {{> afQuickField name=this.current.memberName}}
+      {{> afQuickField name=this.current.memberRole}}
+     {{/afEachArrayItem}}
+   </fieldset>
+     <button type="submit" class="btn btn-primary">Save</button>
+     {{/autoForm}}
+   </div>
+</template>

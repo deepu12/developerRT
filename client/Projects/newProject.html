@@ -10,6 +10,10 @@
         {{> afQuickField name='workspaceId' options=wsOptions}}
        {{> afQuickField name='createdAt' type="hidden"}}
        {{> afQuickField name='userId' type="hidden"}}
+       {{#afEachArrayItem name="members"}}
+         {{> afQuickField name=this.current.memberName type="hidden"}}
+         {{> afQuickField name=this.current.memberRole type="hidden"}}
+       {{/afEachArrayItem}}
        {{> afQuickField name='visibility'}}
         <button type="submit" class="btn btn-success">Add</button>
      </fieldset>
