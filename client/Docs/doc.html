@@ -1,6 +1,7 @@
 <template name="doc">
-   {{> docDisplay}}
+
    <div style="margin-left:400px; margin-right : 190px">
+      {{> docDisplay}}
      {{#autoForm id="insertForm" type="insert" collection="Docs"}}
      <!-- {{> afQuickField name="name"}} -->
      {{> afQuickField name="userId" type="hidden"}}
