@@ -1,6 +1,12 @@
 <template name="docDisplay">
-   <h5>Hello... This is doc display template</h5>
-   {{#each fileId}}
-   <a href="/doc/{{_id}}">{{name}}</a>
-   {{/each}}
+   <div class="panel panel-primary" style="margin-right : 190px">
+      <div class="panel-heading">
+         <h3 class="panel-title">User Files</h3>
+      </div>
+      {{#each fileID}}
+      <div class="panel-body">
+         <a href="/doc/{{_id}}">{{original.name}}</a>
+      </div>
+      {{/each}}
+   </div>
 </template>

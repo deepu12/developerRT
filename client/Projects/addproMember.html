@@ -9,7 +9,7 @@
      {{> afQuickField name='visibility' type="hidden"}}
      {{> afQuickField name='userName' type="hidden"}}
      {{> afQuickField name='createdAt' type="hidden"}}
-     {{#afEachArrayItem name="members"}}
+      {{#afEachArrayItem name="members"}}
       {{> afQuickField name=this.current.memberName}}
       {{> afQuickField name=this.current.memberRole}}
      {{/afEachArrayItem}}
