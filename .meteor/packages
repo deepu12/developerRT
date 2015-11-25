@@ -37,3 +37,5 @@ cfs:autoform
 matteodem:easy-search
 pascoual:pdfjs
 silentcicero:jszip
+froala:editor
+froala:editor-reactive

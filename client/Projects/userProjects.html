@@ -3,6 +3,7 @@
       <div class="panel-heading">
          <h3 class="panel-title">User Projects</h3>
       </div>
+      {{#if currentUser}}
       {{#each uProjects}}
       <div class="panel-body">
          <a href="/projects/{{_id}}">{{name}}</a>
@@ -10,5 +11,9 @@
          <a href="/projects/addMember/{{_id}}"><button class="btn btn-info" id="add-members">+ ADD MEMBER</button></a>
       </div>
       {{/each}}
+      {{else}}
+
+      <h5>&nbsp;Please Login to see projects</h5>
+      {{/if}}
    </div>
 </template>
