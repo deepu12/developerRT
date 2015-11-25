@@ -1,6 +1,6 @@
 <template name="addproMember">
    <div style="margin-left: 400px; margin-right : 190px">
-   {{#autoForm collection="Project" id="addMembers" type="update" doc=addMember}}
+   {{#autoForm collection="Project" id="addMembers" type="update-pushArray" doc=addMember scope="members" }}
    <fieldset>
      <legend>Add Member</legend>
      {{> afQuickField name='name' readonly=true}}
@@ -9,10 +9,10 @@
      {{> afQuickField name='visibility' type="hidden"}}
      {{> afQuickField name='userName' type="hidden"}}
      {{> afQuickField name='createdAt' type="hidden"}}
-      {{#afEachArrayItem name="members"}}
+      <!-- {{#afEachArrayItem name="members"}} -->
       {{> afQuickField name=this.current.memberName}}
       {{> afQuickField name=this.current.memberRole}}
-     {{/afEachArrayItem}}
+     <!-- {{/afEachArrayItem}} -->
    </fieldset>
      <button type="submit" class="btn btn-primary" id="btn-update">Save</button>
      {{/autoForm}}

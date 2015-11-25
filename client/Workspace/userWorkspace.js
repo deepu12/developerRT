@@ -3,4 +3,4 @@ Template.userWorkspace.helpers({
       var ws = WorkSpace.find({userId : Meteor.userId()});
       return ws;
    }
-})
+});
