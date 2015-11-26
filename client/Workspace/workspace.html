@@ -1,9 +1,10 @@
 <template name="workspace">
    <div style="margin-left: 400px; margin-right : 190px">
       <ul class="nav nav-tabs">
-         <li class=""><a href="#settings"  data-toggle="tab" aria-expanded="false">Settings</a></li>
+         <li class="active"><a href="#settings"  data-toggle="tab" aria-expanded="true">Settings</a></li>
          <li class=""><a href="#projects" data-toggle="tab" aria-expanded="false">Projects</a></li>
          <li class=""><a href="#members" data-toggle="tab" aria-expanded="false">Members</a></li>
+         <li class=""><a href="#folders" data-toggle="tab" aria-expanded="false">Folders</a></li>
       </ul>
       <div id="myTabContent" class="tab-content">
          <div class="tab-pane fade active" id="settings">
@@ -17,6 +18,10 @@
          <div class="tab-pane fade active" id="members">
             &nbsp;
             {{> workspaceMembers}}
+         </div>
+         <div class="tab-pane fade active" id="folders">
+            &nbsp;
+            {{> workspaceFolder}}
          </div>
       </div>
    </div>

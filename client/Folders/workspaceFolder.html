@@ -1,0 +1,13 @@
+<template name="workspaceFolder">
+   <div class="panel panel-primary" style="margin-right : 190px">
+      <div class="panel-heading">
+         <h3 class="panel-title">Workspace Folders</h3>
+      </div>
+      {{#each wsFolder}}
+      <div class="panel-body">
+         <a href="/folder/{{_id}}"><i class="fa fa-folder"></i>{{folderName}}</a>
+         &nbsp;&nbsp;&nbsp;
+      </div>
+      {{/each}}
+   </div>
+</template>
