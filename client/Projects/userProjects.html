@@ -3,7 +3,7 @@
       <div class="panel-heading">
          <h3 class="panel-title">User Projects</h3>
       </div>
-      {{#if currentUser}}
+      {{#if uProjects.length}}
       {{#each uProjects}}
       <div class="panel-body">
          <a href="/projects/{{_id}}">{{name}}</a>
@@ -12,8 +12,13 @@
       </div>
       {{/each}}
       {{else}}
-
-      <h5>&nbsp;Please Login to see projects</h5>
+      <div class="panel-body">
+         <h5>There are no projects added to this workspace.</h5>
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         <p>
+            Add <a href="/newProject" class="btn btn-default">New Project</a> here.
+         </p>
+      </div>
       {{/if}}
    </div>
 </template>

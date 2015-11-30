@@ -1,0 +1,14 @@
+<template name="userFolders">
+   <div class="panel panel-primary" style="margin-left:400px; margin-right : 190px">
+      <div class="panel-heading">
+         <h3 class="panel-title">User Folders</h3>
+      </div>
+      {{#each uFolders}}
+      <div class="panel-body">
+         <a href="/folder/{{_id}}"><i class="fa fa-folder"></i>&nbsp;{{folderName}}</a>
+         &nbsp;&nbsp;&nbsp;
+         <a href="/addFiles/{{_id}}" class="btn btn-primary btn-xs"> + ADD FILES</a>
+      </div>
+      {{/each}}
+   </div>
+</template>
