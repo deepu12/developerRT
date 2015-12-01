@@ -1,7 +1,8 @@
 <template name="docDisplay">
-   <div class="panel panel-primary" style="margin-right : 190px">
+   <div style="margin-left: 400px; margin-right : 190px">
+   <div class="panel panel-info" style="margin-right : 190px">
       <div class="panel-heading">
-         <h3 class="panel-title">User Files</h3>
+         <a href="/userFiles"><h3 class="panel-title">User Files</h3></a>
       </div>
       {{#each fileID}}
       <div class="panel-body">
@@ -9,4 +10,5 @@
       </div>
       {{/each}}
    </div>
+</div>
 </template>
