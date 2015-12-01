@@ -3,12 +3,12 @@
       <div class="panel-heading">
          <h3 class="panel-title">Workspace Folders</h3>
       </div>
-      {{#if wsFolder.length}}
+      {{#if wsFolder}}
       {{#each wsFolder}}
       <div class="panel-body">
          <a href="/folder/{{_id}}"><i class="fa fa-folder"></i>&nbsp;{{folderName}}</a>
          &nbsp;&nbsp;&nbsp;
-         <a href="/addFiles/{{_id}}" class="btn btn-primary btn-xs"> + ADD FILES</a>
+         <a href="/wsFile/{{_id}}" class="btn btn-primary btn-xs"> + ADD FILES</a>
       </div>
       {{/each}}
       {{else}}

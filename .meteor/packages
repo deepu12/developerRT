@@ -39,3 +39,4 @@ pascoual:pdfjs
 silentcicero:jszip
 froala:editor
 froala:editor-reactive
+flawless:meteor-toastr
