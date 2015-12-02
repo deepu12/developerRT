@@ -1,0 +1,15 @@
+<template name="proMembers">
+   <div style="margin-left: 400px; margin-right : 190px">
+   <div class="panel panel-info" style="margin-right : 190px">
+      <div class="panel-heading">
+         <h3 class="panel-title">Project Members</h3>
+      </div>
+
+   {{#each pMembers.members}}
+   <div class="panel-body">
+      {{memberName}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;{{memberRole}}
+   </div>
+   {{/each}}
+   </div>
+</div>
+</template>

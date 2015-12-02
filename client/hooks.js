@@ -2,15 +2,17 @@ AutoForm.hooks({
    insertFiles : {
       onError : function(insert, error){
          console.log("on Error Function"+error);
-         toastr.error("File creation failed");
+         toastr.warning(error);
+         toastr.error("Failed to create");
       },
       onSuccess : function(insert, error){
-         toastr.success("File created successfully");
+         toastr.success("Created successfully");
          FlowRouter.go('/userFolders');
       }
    },
    insertFolder : {
       onError : function(insert, error){
+         toastr.warning(error);
          toastr.error("Failed to create folder");
       },
       onSuccess : function(insert, error){
@@ -20,6 +22,7 @@ AutoForm.hooks({
    },
    insertProject : {
       onError : function(insert, error){
+         toastr.warning(error);
          toastr.error("Failed to create project");
       },
       onSuccess : function(insert, error){
@@ -30,6 +33,7 @@ AutoForm.hooks({
    insertForm : {
       onError : function(insert, error){
          toastr.error("Upload failed");
+         toastr.warning(error);
       },
       onSuccess : function(insert, error){
          toastr.success("Upload Successful");
@@ -38,6 +42,7 @@ AutoForm.hooks({
    },
    updateProject : {
       onError : function(insert, error){
+         toastr.warning(error);
          toastr.error("Update Failed");
       },
       onSuccess : function(insert, error){
@@ -47,6 +52,7 @@ AutoForm.hooks({
    },
    addMembers : {
       onError : function(insert, error){
+         toastr.warning(error);
          console.log("AddMembers on error func:"+error);
          toastr.error("Failed to add members");
       },
@@ -57,6 +63,7 @@ AutoForm.hooks({
    },
    insertWorkspace : {
       onError : function(insert, error){
+         toastr.warning(error);
          toastr.error("Failed to create workspace");
       },
       onSuccess : function(insert, error){
@@ -66,6 +73,7 @@ AutoForm.hooks({
    },
    updateWorkspace : {
       onError : function(insert, error){
+         toastr.warning(error);
          toastr.error("Failed to update workspace");
       },
       onSuccess : function(insert, error){

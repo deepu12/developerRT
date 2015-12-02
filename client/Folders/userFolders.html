@@ -6,9 +6,11 @@
       </div>
       {{#each uFolders}}
       <div class="panel-body">
-         <a href="/folder/{{_id}}"><i class="fa fa-folder"></i>&nbsp;{{folderName}}</a>
+         <a href="/folder/files/{{_id}}"><i class="fa fa-folder"></i>&nbsp;{{folderName}}</a>
          &nbsp;&nbsp;&nbsp;
          <a href="/addFiles/{{_id}}" class="btn btn-primary btn-xs"> + ADD FILES</a>
+         <!-- <a href="/folder/{{_id}}"><i class="fa fa-file"></i>{{files.fileName}}</a> -->
+
       </div>
       {{/each}}
    </div>
