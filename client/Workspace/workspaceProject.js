@@ -1,3 +1,4 @@
+Meteor.subscribe("workspace");
 Template.workspaceProject.helpers({
    wsProjects : function(){
       console.log("Work space project Id :",this.workspaceId);

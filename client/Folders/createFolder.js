@@ -1,3 +1,4 @@
+Meteor.subscribe("folders");
 Template.createFolder.helpers({
    cfWorkspace : function(){
       return WorkSpace.find({userId : Meteor.userId()}).map(function (wId){

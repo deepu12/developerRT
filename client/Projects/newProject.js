@@ -1,3 +1,4 @@
+Meteor.subscribe("project");
 Template.newProject.helpers({
    wsOptions : function(){
       return WorkSpace.find().map(function (c) {

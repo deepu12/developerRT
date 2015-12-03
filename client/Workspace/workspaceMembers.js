@@ -1,3 +1,4 @@
+Meteor.subscribe("workspace");
 Template.workspaceMembers.helpers({
    wsMembers : function(){
       console.log("The workspace Id is coming",this.workspaceId);

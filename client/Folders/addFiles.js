@@ -1,3 +1,4 @@
+Meteor.subscribe("folders");
 Template.addFiles.helpers({
    aFiles : function(params){
       console.log("This is my folder Id:",this.folderId);

@@ -1,3 +1,4 @@
+Meteor.subscribe("project");
 Template.editProject.helpers({
    eProjects : function(params){
       console.log("This is my project Id : ",this.projectId);

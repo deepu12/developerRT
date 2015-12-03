@@ -1,3 +1,5 @@
+Meteor.subscribe("docs");
+Meteor.subscribe("files");
 Template.docDisplay.helpers({
    fileID : function(){
       var fid = 0;
