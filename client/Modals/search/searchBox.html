@@ -1,9 +1,9 @@
-<!-- <template name="searchBox">
-   {{> esInput index=projectsIndex placeholder="Search Projects" }}
+<template name="searchBox">
+    {{> EasySearch.Input index=projectsIndex placeholder="Search for Projects" }}
 
-        <ul>
-           {{#esEach index=projectsIndex }}
-               <li>Name of the Project: {{name}}</li>
-           {{/esEach}}
-       </ul>
-</template> -->
+    <ul>
+        {{#EasySearch.Each index=projectsIndex }}
+            Project:<a href="/project/{{_id}}"> {{name}}</a>
+        {{/EasySearch.Each}}
+    </ul>
+</template>

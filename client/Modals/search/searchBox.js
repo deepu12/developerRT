@@ -1,3 +1,3 @@
-// Template.searchBox.helpers({
-//    projectsIndex: () => ProjectsIndex
-// })
+Template.searchBox.helpers({
+   projectsIndex: () => ProjectsIndex
+})
