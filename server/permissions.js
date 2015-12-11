@@ -45,3 +45,15 @@ Folders.allow({
       return false;
    }
 });
+
+Files.allow({
+   'insert' : function(userId, doc){
+      return userId;
+   },
+   'update' : function(userId, doc, fields, modifiers){
+      return userId == doc.userId;
+   },
+   'remove' : function(userId,  doc){
+      return false;
+   }
+});

@@ -1,5 +1,5 @@
-Meteor.publish('project', function (){
-   return Project.find();
+Meteor.publish('project', function (userId){
+   return Project.find({userId : userId});
 });
 Meteor.publish('docs', function(){
    return Docs.find();

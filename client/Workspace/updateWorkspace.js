@@ -1,4 +1,3 @@
-Meteor.subscribe("workspace");
 Template.updateWorkspace.helpers({
    workSp : function(params){
       console.log("This is my workspace Id : ",this.workspaceId);
@@ -19,4 +18,8 @@ Template.updateWorkspace.events({
       }
       return btnRemove;
    }
+});
+
+Template.updateWorkspace.onCreated(function(){
+   Meteor.subscribe("workspace");
 });

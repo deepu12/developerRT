@@ -2,12 +2,12 @@
   <header>
     {{> navbar}}
   </header>
-   <div class="row" style="margin-left : 15px; margin-right : 5px">
-      <div class="col s3" style="width : 130px; padding-left : 20px">
+  <div class="row">
+      <div class="menu" style="width : 130px; padding-left : 20px">
          <!-- <ul class="list-group"> -->
-            <a href="/dashBoard" class="list-group-item active">
+            <!-- <a href="/dashBoard" class="list-group-item active">
                Dash Board
-            </a>
+            </a> -->
             <a href="/userProjects" class="list-group-item active">
                Projects
             </a>
@@ -17,29 +17,15 @@
             <a href="/userFolders" class="list-group-item active">
                Folders
             </a>
-
-            <!-- <li class="list-group-item active">
-               <a href="/dashBoard">DashBoard</a>
-            </li>
-            <li class="list-group-item">
-               <a href="/newProject">Projects</a>
-            </li>
-            <li class="list-group-item">
-               <a href="/workSpace">Workspace</a>
-            </li>
-            <li class="list-group-item">
-               <a href="/userFolders">Folders</a>
-            </li> -->
-            <!-- &nbsp;
-            <a href="/createFolder" class="btn btn-primary btn-lg"> + CREATE FOLDER</a> -->
-         <!-- </ul> -->
+            &nbsp;
+            &nbsp;
       </div>
-      <div class="col s8">
+      <div class="main">
          <main style="min-height : 510px;">
            {{>Template.dynamic template=content data=params}}
          </main>
       </div>
-    </div>
+      </div>
     <footer class="page-footer" style="colour : #e02d2d;">
           <div class="footer-copyright">
             <div class="container">

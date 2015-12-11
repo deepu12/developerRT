@@ -1,5 +1,3 @@
-Meteor.subscribe("docs");
-Meteor.subscribe("files");
 Template.docDisplay.helpers({
    fileID : function(){
       var fid = 0;
@@ -12,5 +10,10 @@ Template.docDisplay.helpers({
          return fid;
       })
    return mapFun;
-}
-})
+   }
+});
+
+Template.docDisplay.onCreated(function(){
+   Meteor.subscribe("docs");
+   Meteor.subscribe("files");
+});

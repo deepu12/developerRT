@@ -1,4 +1,4 @@
-Meteor.subscribe("project");
+
 Template.editProject.helpers({
    eProjects : function(params){
       console.log("This is my project Id : ",this.projectId);
@@ -20,4 +20,10 @@ Template.editProject.events({
       }
       return btnRemove;
    }
+});
+Template.editProject.onCreated(function(){
+   var self = this;
+   this.autorun(function(){
+      self.subscribe("project", Meteor.userId());
+   })
 });

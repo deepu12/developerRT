@@ -1,18 +1,28 @@
 <template name="userFolders">
-   <div style="margin-left: 400px; margin-right : 190px">
-   <div class="panel panel-info" style="margin-right : 190px">
+   <div class="hscroll-holder">
+      <div class="hscroll-container">
+         <ul id="explore-root">
+            {{> viewFiles fdata}}
+         </ul>
+      </div>
+   </div>
+   <div class="main">
+      <div style="float:right">
+      <a href="/createFolder" class="btn btn-warning btn-lg btn-block" data-toggle="modal" data-target="#myModal">+ CREATE FOLDER</a>
+      &nbsp;
+      &nbsp;
+   <div class="panel panel-info">
       <div class="panel-heading">
          <h3 class="panel-title">User Folders</h3>
       </div>
       {{#each uFolders}}
       <div class="panel-body">
-         <a href="/folder/files/{{_id}}"><i class="fa fa-folder"></i>&nbsp;{{folderName}}</a>
+         <a href="/folder/files/{{_id}}"><i class="fa fa-folder"></i>&nbsp;{{name}}</a>
          &nbsp;&nbsp;&nbsp;
-         <a href="/addFiles/{{_id}}" class="btn btn-primary btn-xs"> + ADD FILES</a>
-         <!-- <a href="/folder/{{_id}}"><i class="fa fa-file"></i>{{files.fileName}}</a> -->
-
-      </div>
-      {{/each}}
-   </div>
-</div>
+         <a href="/addFiles/{{_id}}" class="btn btn-primary btn-xs" folid="{{_id}}" id="add-file" data-toggle="modal" > + ADD FILES</a>
+               </div>
+               {{/each}}
+            </div>
+         </div>
+         </div>
 </template>

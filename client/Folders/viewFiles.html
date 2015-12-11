@@ -1,0 +1,45 @@
+<template name="viewFiles">
+      {{> vFolders vfolders}}
+      {{> vFiles vfiles}}
+</template>
+
+<template name="vxFolders">
+   {{#each this}}
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h4 class="panel-title">
+               <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="folder-item" fid="{{_id}}"><i class="fa fa-folder my-primary"></i>&nbsp;&nbsp;{{name}}</a>
+            </h4>
+         </div>
+         <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body" id='{{_id}}'></div>
+         </div>
+      </div>
+   {{/each}}
+</template>
+
+<template name="vFolders">
+   {{#each this}}
+    <li class="list-group-item cursor-pointer">
+      <div class="folder-item" fid="{{_id}}" >
+         <i class="fa fa-folder my-primary"></i>&nbsp;&nbsp;{{name}}
+      </div>
+      <div class="dropdown open" style="float: right;padding: 8px;">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+         <i class="fa fa-plus my-primary" fid={{_id}} ></i><span class="caret"></span>
+         </a>
+         <ul class="dropdown-menu dropdown-menu-right" style="min-width : 80px; padding: 5px;">
+           <li><i class="fa fa-folder my-primary"></i>&nbsp;&nbsp;Folder</li>
+          <li><i class="fa fa-file"></i>&nbsp;&nbsp;File</li>
+       </ul>
+      </div>
+      <ul class="subfolders" id="{{_id}}"></ul>
+   </li>
+   {{/each}}
+</template>
+
+<template name="vFiles">
+   {{#each this}}
+    <li class="list-group-item cursor-pointer file-item"><i class="fa fa-file my-secondary"></i>&nbsp;&nbsp;{{name}}</li>
+   {{/each}}
+</template>

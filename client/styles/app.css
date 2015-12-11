@@ -1,0 +1,54 @@
+.my-primary{
+   color: #1690DB;
+}
+.my-secondary{
+   color: #fff;
+}
+.cursor-pointer{
+   cursor: pointer;
+   border: 0;
+   border-left: 1px solid #464545;
+   width: 365px;
+}
+.cursor-pointer.div{
+   display: inline-block !important;
+}
+.folder-item{
+   display: inline-block;
+}
+.subfolders{
+   margin-top: 16px;
+   /*width: 300px;*/
+   /*min-width: 300px;*/
+   white-space: nowrap;
+   /*overflow: hidden;*/
+}
+.file-explorer {
+   /*width: 400px;*/
+}
+#explore-root{
+   /*width: 365px;*/
+}
+.menu{
+   width: 30%;
+   float: left;
+    padding: 15px;
+}
+.main{
+   width : 70%;
+   float: left;
+   padding: 15px;
+   margin-left: 100px;
+   margin-right: 150px;
+}
+.hscroll-holder{
+   overflow-x: scroll;
+   background-color: #303030;
+   width: 500px;
+   padding: 24px;
+   border: 1px solid #1690db;
+   border-radius: 6px;
+}
+.hscroll-container{
+   width: auto;
+}

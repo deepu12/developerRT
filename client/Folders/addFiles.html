@@ -1,24 +1,32 @@
 <template name="addFiles">
-   <div style="margin-left: 400px; margin-right : 190px">
-   	<!-- <h5>Hi, Adding files will be available soon.</h5> -->
-      {{#autoForm collection="Folders" id="insertFiles" type="update-pushArray" doc=aFiles scope="files"}}
+   <div class="row">
+   <input type="radio" name="option" checked="checked" /> File
+    <input type="radio" name="option" /> Folder
+   <!-- <div style="margin-left: 400px; margin-right : 190px"> -->
+   <div class="add" id="addfile">
+      {{#autoForm collection="Files" id="insertFiles" type="insert"}}
         <fieldset>
-          <legend>Create Sub-Folder or File</legend>
-           {{> afQuickField name='folderName' type="hidden"}}
-           <!-- {{#afEachArrayItem name="files"}} -->
-            {{> afQuickField name="fileName"}}
-            <center>
-               <h2>-----------OR-----------</h2>
-            </center>
-            {{> afQuickField name="foldername"}}
-           <!-- {{/afEachArrayItem}} -->
-           {{> afQuickField name='userId' type="hidden"}}
-           {{> afQuickField name='userName' type="hidden"}}
-           {{> afQuickField name='workspaceId' options=cfWorkspace type="hidden"}}
-           {{> afQuickField name='projectId' options=cfProjects type="hidden"}}
+          <legend>File</legend>
+           {{> afQuickField name='name'}}
+            {{> afQuickField name="userId" type="hidden"}}
+            {{> afQuickField name='parentId' value=aFiles type="hidden"}}
            {{> afQuickField name='createdAt' type="hidden"}}
            <button type="submit" class="btn btn-success"> CREATE</button>
         </fieldset>
         {{/autoForm}}
-	</div>
+   </div>
+   <div class="add" id="addfolder">
+      {{#autoForm collection="Folders" id="insertFolder" type="insert"}}
+        <fieldset>
+          <legend>File</legend>
+           {{> afQuickField name='name'}}
+            {{> afQuickField name="userId" type="hidden"}}
+            {{> afQuickField name='parentId' value=aFiles type="hidden"}}
+           {{> afQuickField name='createdAt' type="hidden"}}
+           <button type="submit" class="btn btn-success"> CREATE</button>
+        </fieldset>
+        {{/autoForm}}
+   </div>
+</div>
+	<!-- </div> -->
 </template>

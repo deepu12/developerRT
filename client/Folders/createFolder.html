@@ -1,19 +1,18 @@
 <template name="createFolder">
-   <div style="margin-left:400px; margin-right : 190px">
-      {{#autoForm collection="Folders" id="insertFolder" type="insert" resetOnSuccess=true}}
-        <fieldset>
-          <legend>Create Folder</legend>
-           {{> afQuickField name='folderName'}}
-           {{#afEachArrayItem name="files"}}
-            {{> afQuickField name=this.current.fileName type="hidden"}}
-           {{/afEachArrayItem}}
-           {{> afQuickField name='userId' type="hidden"}}
-             {{> afQuickField name='userName' type="hidden"}}
-           {{> afQuickField name='workspaceId' options=cfWorkspace}}
-           {{> afQuickField name='projectId' options=cfProjects}}
-           {{> afQuickField name='createdAt' type="hidden"}}
-           <button type="submit" class="btn btn-success"> CREATE</button>
-        </fieldset>
-        {{/autoForm}}
-      </div>
+   <!-- <div style="margin-left:400px; margin-right : 190px">
+      {{#each cfFolders}}
+      {{name}}
+      {{/each}}
+         {{#autoForm collection="Folders" id="insertFolder" type="insert" resetOnSuccess=true}}
+           <fieldset>
+             <legend>Create Folder</legend>
+              {{> afQuickField name='name'}}
+              {{> afQuickField name='parentId' type="hidden" value="root"}}
+              {{> afQuickField name='userId' type="hidden"}}
+              {{> afQuickField name='createdAt' type="hidden"}}
+           </fieldset>
+            <button type="submit" class="btn btn-success"> CREATE</button>
+            {{/autoForm}}
+         </div> -->
+      
 </template>
